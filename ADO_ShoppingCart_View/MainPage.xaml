@@ -1,0 +1,23 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ADO_ShoppingCart_View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    x:Class="ADO_ShoppingCart_View.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView Name="Products" BorderBrush="White" CornerRadius="10" BorderThickness="2" Margin="191,119,741,97"  Height="504" Width="348" SelectionChanged="Products_SelectionChanged"/>
+        <ListView Name="Shopping_Cart" BorderBrush="White" CornerRadius="10" BorderThickness="2" Margin="698,119,234,168" Width="348"/>
+        <TextBlock Name="Products_Block" HorizontalAlignment="Left" Margin="288,50,0,0" Text="Products" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name="ShoppingCart_Block" HorizontalAlignment="Left" Margin="745,49,0,0" Text="Shopping Cart" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Name="Purchaase" Click="Purchase_Click" BorderBrush="White" FontSize="20" CornerRadius="10" BorderThickness="2" Content="Purchase" Margin="823,595,0,0" Width="98" Height="43" VerticalAlignment="Top"/>
+
+        <TextBlock Visibility="Collapsed" TextAlignment="Center" Name="Product_Update_In_Cart" HorizontalAlignment="Left" FontSize="20" Margin="557,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="30"/>
+        <Button Visibility="Collapsed" Name="Product_Minus" Content="-" Margin="600,390,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Product_Minus_Click"/>
+        <Button Visibility="Collapsed" Name="Product_Plus" Content="+" Margin="600,320,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Product_Plus_Click" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Page>
